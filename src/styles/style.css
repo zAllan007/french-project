@@ -1,1 +1,47 @@
 @import url(./global.css);
+
+/* Header */
+
+header{
+background-color: var(--color-french-blue);
+color: var(--color-french-white);
+font-family: var(--font-family-primary);
+font-size: var(--font-size-h2);
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 25px 50px;
+border-bottom: 2px solid var(--color-french-white)
+}
+
+/* Main */
+
+main{
+    background-color: var(--color-baby-blue);
+    color: var(--color-french-white);
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-body);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    gap: 50px;
+}
+
+.france-main-text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    width: 550px;
+    align-items: center;
+}
+
+.france-main-text h1{
+    font-size: var(--font-size-h1);
+    width: 425px;
+}
+
+.france-main-text span{
+color: var(--color-baby-red);
+}
