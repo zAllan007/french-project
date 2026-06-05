@@ -2,22 +2,23 @@
 
 /* Header */
 
-header{
-background-color: var(--color-french-blue);
-color: var(--color-french-white);
-font-family: var(--font-family-primary);
-font-size: var(--font-size-h2);
-display: flex;
-align-items: center;
-justify-content: center;
-padding: 25px 50px;
-border-bottom: 2px solid var(--color-french-white)
+header {
+    background-color: var(--color-black);
+    color: var(--color-french-white);
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-h2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 50px;
+    border-bottom: 2px solid var(--color-baby-red);
+    font-weight: var(--font-weigth-h2);
 }
 
 /* Main */
 
-main{
-    background-color: var(--color-baby-blue);
+main {
+    background-color: var(--color-black);
     color: var(--color-french-white);
     font-family: var(--font-family-primary);
     font-size: var(--font-size-body);
@@ -26,9 +27,10 @@ main{
     align-items: center;
     padding: 50px 0;
     gap: 50px;
+    border-bottom: 2px solid var(--color-baby-blue);
 }
 
-.france-main-text{
+.france-main-text {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -37,11 +39,74 @@ main{
     align-items: center;
 }
 
-.france-main-text h1{
-    font-size: var(--font-size-h1);
-    width: 425px;
+.france-main-text a {
+    font-size: var(--font-weigth-h1);
+    color: var(--color-french-white);
+    text-decoration: none;
 }
 
-.france-main-text span{
-color: var(--color-baby-red);
+.france-main-text:hover {
+    transition: 0.3s;
+    transform: scale(1.2);
+}
+
+
+.france-main-text span {
+    color: var(--color-baby-red);
+}
+
+/* Section Photos */
+
+.section-photos {
+    background-color: var(--color-black);
+    color: var(--color-french-white);
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weigth-body);
+    padding: 80px 200px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.france-photo-list ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 250px);
+    gap: 40px;
+    width: 90%;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.france-photo-list li {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.france-photo-list li {
+    text-align: center;
+}
+
+.france-photo-list img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.france-photo-list li:hover {
+transform: scale(1.1);
+transition: 0.3s;
+color: var(--color-baby-blue);
+}
+
+.france-photo-list h2{
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weigth-h2);
 }
