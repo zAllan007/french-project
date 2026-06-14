@@ -10,9 +10,28 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 25px 50px;
-    border-bottom: 2px solid var(--color-baby-red);
+    padding: 30px 55px;
+    border-bottom: 2px solid var(--color-french-red);
     font-weight: var(--font-weigth-h2);
+}
+
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    font-family: var(--font-family-primary);
+    list-style: none;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: var(--color-french-white);
+    font-size: var(--font-size-h3);
+}
+
+.nav-links a:hover{
+transition: 0.3s;
+color: var(--color-french-red);
 }
 
 /* Main */
@@ -37,23 +56,37 @@ main {
     gap: 30px;
     width: 550px;
     align-items: center;
+    transform: scale(1.2);
 }
 
-.france-main-text a {
+.france-main-text {
     font-size: var(--font-weigth-h1);
     color: var(--color-french-white);
     text-decoration: none;
 }
 
-.france-main-text:hover {
-    transition: 0.3s;
-    transform: scale(1.2);
+.france-main-text h1{
+    width: 350px;
 }
 
 
-.france-main-text span {
-    color: var(--color-baby-red);
+.discover-text-h1 {
+    color: var(--color-baby-blue);
 }
+
+
+.french-blue-h1 {
+    color: var(--color-french-blue);
+}
+
+.french-white-h1 {
+    color: var(--color-french-white);
+}
+
+.french-red-h1 {
+    color: var(--color-french-red);
+}
+
 
 /* Section Photos */
 
@@ -69,6 +102,8 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border-bottom: 2px solid var(--color-french-red);
+
 }
 
 .france-photo-list ul {
@@ -101,12 +136,11 @@ main {
 }
 
 .france-photo-list li:hover {
-transform: scale(1.1);
-transition: 0.3s;
-color: var(--color-baby-blue);
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
-.france-photo-list h2{
+.france-photo-list h2 {
     font-size: var(--font-size-h2);
     font-weight: var(--font-weigth-h2);
 }
