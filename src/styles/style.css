@@ -12,10 +12,10 @@ header {
     justify-content: center;
     padding: 30px 55px;
     border-bottom: 2px solid var(--color-french-red);
-    font-weight: var(--font-weigth-h2);
+    font-weight: var(--font-weigth-h4);
 }
 
-.nav-links{
+.nav-links {
     display: flex;
     flex-direction: row;
     gap: 50px;
@@ -23,15 +23,15 @@ header {
     list-style: none;
 }
 
-.nav-links a{
+.nav-links a {
     text-decoration: none;
     color: var(--color-french-white);
     font-size: var(--font-size-h3);
 }
 
-.nav-links a:hover{
-transition: 0.3s;
-color: var(--color-french-red);
+.nav-links a:hover {
+    transition: 0.3s;
+    color: var(--color-french-red);
 }
 
 /* Main */
@@ -46,7 +46,7 @@ main {
     align-items: center;
     padding: 50px 0;
     gap: 50px;
-    border-bottom: 2px solid var(--color-baby-blue);
+    border-bottom: 2px solid var(--color-french-red);
 }
 
 .france-main-text {
@@ -65,7 +65,7 @@ main {
     text-decoration: none;
 }
 
-.france-main-text h1{
+.france-main-text h1 {
     width: 350px;
 }
 
@@ -87,6 +87,102 @@ main {
     color: var(--color-french-red);
 }
 
+
+/* Section Knowing the France */
+
+.section-knowing-france {
+    background-color: var(--color-black);
+    color: var(--color-french-white);
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weigth-body);
+    padding: 50px 0px;
+    border-bottom: 2px solid var(--color-french-red);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.knowing-intro-text {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 875px;
+    gap: 30px;
+}
+
+.knowing-culture-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    width: 875px;
+    flex-direction: row;
+}
+
+.knowing-culture-text h3{
+    font-family: var(--font-weigth-h3);
+    font-weight: var(--font-weigth-h3);
+}
+
+.knowing-culture-text img {
+    border-radius: 15px;
+    height: 375px;
+    width: 375px;
+}
+
+.knowing-story-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    width: 875px;
+    flex-direction: row-reverse;
+}
+
+.knowing-story-text h3{
+    font-family: var(--font-weigth-h3);
+    font-weight: var(--font-weigth-h3);
+}
+
+.knowing-story-text img {
+    border-radius: 15px;
+    height: 375px;
+    width: 375px;
+}
+
+.knowing-scenery-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    width: 875px;
+    flex-direction: row;
+}
+
+.knowing-scenery-text h3{
+    font-family: var(--font-weigth-h3);
+    font-weight: var(--font-weigth-h3);
+}
+
+.knowing-scenery-text img {
+    border-radius: 15px;
+    height: 375px;
+    width: 375px;
+}
+
+.knowing-actually-text {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 875px;
+    gap: 30px;
+}
 
 /* Section Photos */
 
@@ -110,7 +206,7 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 250px);
-    gap: 40px;
+    gap: 65px;
     width: 90%;
     margin: 0 auto;
     list-style: none;
@@ -136,7 +232,7 @@ main {
 }
 
 .france-photo-list li:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     transition: 0.3s;
 }
 
@@ -144,3 +240,5 @@ main {
     font-size: var(--font-size-h2);
     font-weight: var(--font-weigth-h2);
 }
+
+/* Responsividade */
