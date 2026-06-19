@@ -1,39 +1,149 @@
 @import url(./global.css);
 
 /* Header */
-
 header {
     background-color: var(--color-black);
     color: var(--color-french-white);
     font-family: var(--font-family-primary);
-    font-size: var(--font-size-h2);
+    padding: 20px 55px;
+    border-bottom: 2px solid var(--color-french-red);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 30px 55px;
-    border-bottom: 2px solid var(--color-french-red);
-    font-weight: var(--font-weigth-h4);
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
 }
+
+.logo-text {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weigth-h2);
+    letter-spacing: 2px;
+}
+
+.french-blue-h1  { color: var(--color-french-blue); }
+.french-white-h1 { color: var(--color-french-white); }
+.french-red-h1   { color: var(--color-french-red); }
+
+.logo-text {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weigth-h2);
+    letter-spacing: 2px;
+}
+
+.logo-img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Nav */
+
+.nav-menu { display: flex; }
 
 .nav-links {
     display: flex;
-    flex-direction: row;
-    gap: 50px;
-    font-family: var(--font-family-primary);
+    gap: 40px;
     list-style: none;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--color-french-white);
-    font-size: var(--font-size-h3);
+    font-size: var(--font-size-body);
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weigth-h4);
+    transition: color 0.3s;
+    position: relative;
+    padding-bottom: 4px;
 }
 
-.nav-links a:hover {
-    transition: 0.3s;
-    color: var(--color-french-red);
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 2px;
+    background: var(--color-french-red);
+    transition: width 0.3s;
 }
 
+.nav-links a:hover,
+.nav-links a.active { color: var(--color-french-red); }
+
+.nav-links a:hover::after,
+.nav-links a.active::after { width: 100%; }
+
+/* ─── Hamburger ──────────────────────────────────────── */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    z-index: 200;
+}
+
+.hamburger span {
+    display: block;
+    width: 26px; height: 2px;
+    background-color: var(--color-french-white);
+    border-radius: 2px;
+    transition: transform 0.35s, opacity 0.35s;
+}
+
+.hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ─── Tabs bar ───────────────────────────────────────── */
+
+.tabs-bar {
+    background-color: var(--color-black);
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid var(--color-french-red);
+    font-family: var(--font-family-primary);
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: var(--color-gray-2);
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weigth-h4);
+    padding: 16px 40px;
+    cursor: pointer;
+    transition: color 0.3s;
+    border-bottom: 3px solid transparent;
+    letter-spacing: 0.5px;
+}
+
+.tab-btn:hover { color: var(--color-french-white); }
+
+.tab-btn.active {
+    color: var(--color-french-white);
+    border-bottom: 3px solid var(--color-french-red);
+}
+
+/* ─── Tab toggle ─────────────────────────────────────── */
+
+.tab-content { display: none; }
+.tab-content.active { display: flex; }
 /* Main */
 
 main {
@@ -203,8 +313,6 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border-bottom: 2px solid var(--color-french-red);
-
 }
 
 .france-photo-list ul {
